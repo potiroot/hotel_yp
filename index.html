@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Гостиничный комплекс</title>
+  <link href="//cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style/css/style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="nav-header mb-5 position-relative">
+      <nav class="navbar navbar-expand-lg pt-4">
+        <div class="container">
+          <a class="navbar-brand text-uppercase align-items-center d-flex" href="#">
+            <img src="img/logo.svg" alt="" class="me-2">
+            <span class="text-white fs-3 secondary-font">rent</span><span class="text-primary fs-3 fw-semibold secondary-font">крым</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <p class="navbar-text text-white secondary-font fw-normal me-auto p-0 m-0">
+              Экспресс-подбор <br>
+              жилья по самым низким ценам
+            </p>
+            <ul class="navbar-nav">
+              <li class="nav-item"><a href="#" class="nav-link" id="phone-number">8 (800) 500-56-55</a></li>
+              <li class="nav-item">
+                <a href="#" class="nav-link ps-3">
+                  <img src="img/telegram.svg" alt="Telegram">
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link ps-3">
+                  <img src="img/whatsapp.svg" alt="WhatsApp">
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link ps-3">
+                  <img src="img/viber.svg" alt="Viber">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="nav-header_text mb-5 text-center text-white">
+        <h2 class="fw-bold text-uppercase mb-3">Жилье в Северодвинске</h2>
+        <p>У нас есть <span class="fs-5">450</span> предложений для Вас</p>
+      </div>
+      <div class="container">
+        <div class="nav-header_form">
+          <div class="row row-cols-xl-5 row-cols-2 align-items-center px-0 px-xl-5">
+            <div class="col">
+              <div class="form-item my-3 my-xl-0 w-100 form-floating">
+                <input id="Input-check-in" class="form-control form-control-lg" type="date" aria-label="check-in">
+                <label for="Input-check-in">Заезд</label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-item my-3 my-xl-0 w-100 form-floating">
+                <input id="Input-check-out" class="form-control form-control-lg" type="date" aria-label="check-out">
+                <label for="Input-check-out">Выезд</label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-item my-3 my-xl-0 w-100 form-floating">
+                <input id="Input-guest-count" class="form-control form-control-lg" type="number" min="1" max="20" aria-label="Input-guest-count" placeholder="1">
+                <label for="Input-guest-count">Кол-во гостей</label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-item my-3 my-xl-0 w-100 form-floating">
+                <input id="Input-room-count" class="form-control form-control-lg" type="number" min="1" max="10" aria-label="Input-room-count" placeholder="1">
+                <label for="Input-room-count">Кол-во комнат</label>
+              </div>
+            </div>
+            <div class="col-xl col-6 mx-auto">
+              <div class="form-item my-3 my-xl-0 w-100">
+                <button class="btn btn-primary w-100 text-white py-3">Найти жилье</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="img/arrow-down.svg" class="header_arrow-down" alt="">
+    </div>
+    <div class="advantages pb-5">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-lg-3">
+          <div class="col align-items-center justify-content-between d-flex flex-column">
+            <img src="img/advantages-1.svg" alt="advantages-1">
+            <h3 class="text-center text-white my-4 secondary-font">Lorem, ipsum dolor.</h3>
+            <p class="text-center text-white fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet soluta sint, earum eveniet ipsa cupiditate perspiciatis nobis obcaecati minima iusto blanditiis adipisci veniam porro quia!</p>
+          </div>
+          <div class="col align-items-center justify-content-between d-flex flex-column">
+            <img src="img/advantages-2.svg" alt="advantages-2">
+            <h3 class="text-center text-white my-4 secondary-font">Lorem, ipsum dolor.</h3>
+            <p class="text-center text-white fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet soluta sint, earum eveniet ipsa cupiditate perspiciatis nobis obcaecati minima iusto blanditiis adipisci veniam porro quia!</p>
+          </div>
+          <div class="col align-items-center justify-content-between d-flex flex-column">
+            <img src="img/advantages-3.svg" alt="advantages-3">
+            <h3 class="text-center text-white my-4 secondary-font">Lorem, ipsum dolor.</h3>
+            <p class="text-center text-white fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet soluta sint, earum eveniet ipsa cupiditate perspiciatis nobis obcaecati minima iusto blanditiis adipisci veniam porro quia!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

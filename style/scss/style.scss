@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap');
+
+// <<<============ VARIABLES ============>>>
+
+// font-color: #6B7984
+$primary: #039be5;
+$body-color: #393939;
+$font-family-sans-serif: 'Roboto',
+system-ui,
+-apple-system,
+'Segoe UI',
+Roboto,
+'Helvetica Neue',
+'Noto Sans',
+'Liberation Sans',
+Arial,
+sans-serif,
+'Apple Color Emoji',
+'Segoe UI Emoji',
+'Segoe UI Symbol',
+'Noto Color Emoji' !default;
+
+$container-max-widths: (sm: 540px,
+  md: 720px,
+  lg: 860px,
+  xl: 1040px,
+  xxl: 1300px,
+);
+
+$grid-columns: 14;
+
+// <<<============ STYLES ============>>>
+
+body {
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+.secondary-font {
+  font-family: 'Raleway';
+}
+
+// <<<======== header ========>>>
+
+.header {
+  // height: 65rem;
+  background: #039be5;
+  background: -webkit-linear-gradient(0deg, #039be5 0%, #076ecd 50%, #076ecd 100%);
+  background: linear-gradient(0deg, #039be5 0%, #076ecd 50%, #076ecd 100%);
+
+  .nav-header {
+    // height: 50%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(/img/header-bcg.png);
+    background-repeat: no-repeat;
+    background-size: cover, cover;
+    background-position: center;
+    clip-path: polygon(100% 0%, 100% 65%, 50% 100%, 0% 65%, 0% 0%);
+    padding-bottom: 10rem;
+    .navbar {
+      margin-bottom: 5rem;
+    }
+  }
+
+  .nav-header_text h2 {
+    letter-spacing: 2px;
+  }
+
+  .navbar-brand {
+    span {
+      line-height: 100%;
+    }
+  }
+  .header_arrow-down {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+#phone-number {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 500;
+}
+
+// <<<============ BOOTSTRAP ============>>>
+
+@import '../../node_modules/bootstrap/scss/bootstrap';
