@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap');
-
+@import "../../node_modules/bootstrap/scss/functions";
 // <<<============ VARIABLES ============>>>
 
 // font-color: #6B7984
 $primary: #039be5;
 $body-color: #393939;
+// $enable-gradients: true;
 $font-family-sans-serif: 'Roboto',
 system-ui,
 -apple-system,
@@ -21,14 +22,24 @@ sans-serif,
 'Segoe UI Symbol',
 'Noto Color Emoji' !default;
 
-$container-max-widths: (sm: 540px,
-  md: 720px,
+$container-max-widths: (sm: 450px,
+  md: 680px,
+  lg: 860px,
+  xl: 1040px,
+  xxl: 1300px,
+);
+$grid-breakpoints: (xs: 0,
+  sm: 450px,
+  md: 680px,
   lg: 860px,
   xl: 1040px,
   xxl: 1300px,
 );
 
 $grid-columns: 14;
+
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
 
 // <<<============ STYLES ============>>>
 
@@ -42,6 +53,17 @@ body {
   font-family: 'Raleway';
 }
 
+section {
+  margin: 50px 0;
+  padding: 50px 0;
+}
+
+.btn-primary:hover {
+  background: none;
+  box-shadow: 0 0 0 2px $primary;
+  color: $primary !important;
+}
+
 // <<<======== header ========>>>
 
 .header {
@@ -49,15 +71,17 @@ body {
   background: #039be5;
   background: -webkit-linear-gradient(0deg, #039be5 0%, #076ecd 50%, #076ecd 100%);
   background: linear-gradient(0deg, #039be5 0%, #076ecd 50%, #076ecd 100%);
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.25);
 
   .nav-header {
     // height: 50%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(/img/header-bcg.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../../img/header-bcg.png);
     background-repeat: no-repeat;
     background-size: cover, cover;
     background-position: center;
     clip-path: polygon(100% 0%, 100% 65%, 50% 100%, 0% 65%, 0% 0%);
     padding-bottom: 10rem;
+
     .navbar {
       margin-bottom: 5rem;
     }
@@ -72,6 +96,7 @@ body {
       line-height: 100%;
     }
   }
+
   .header_arrow-down {
     position: absolute;
     bottom: 0px;
@@ -86,6 +111,209 @@ body {
   font-weight: 500;
 }
 
-// <<<============ BOOTSTRAP ============>>>
+// <<<============ ROOMS ============>>>
 
-@import '../../node_modules/bootstrap/scss/bootstrap';
+.rooms {
+  .splide__pagination {
+    bottom: -3em;
+
+    li {
+      margin: 0 .3em;
+    }
+  }
+
+  .splide__pagination__page {
+    background: $primary;
+    height: 1em;
+    width: 1em;
+
+    &.is-active {
+      background: $blue-500;
+    }
+  }
+
+  .splide__arrow {
+    height: 3em;
+    width: 3em;
+    background: $gray-800;
+
+    img {
+      width: 1.5em;
+      height: 1.5em;
+    }
+  }
+
+  .title {
+    margin-bottom: 30px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: -12px;
+      width: 40px;
+      height: 3px;
+      background-color: $primary;
+      content: '';
+    }
+  }
+
+  .type-item:not(:last-child) {
+    margin-bottom: .5rem;
+  }
+
+  .type-item:last-child {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.splide-text {
+  width: 50%;
+  height: 100%;
+  background-color: $gray-300;
+}
+
+.splide__arrow--prev {
+  left: -5rem;
+}
+
+.splide__arrow--next {
+  right: -5rem;
+}
+
+.splider-img {
+  width: 50%;
+}
+
+.splide__slide {
+  background: $gray-300;
+}
+
+// <<<============ ABOUT ============>>>
+
+.about {
+  background: $gray-200;
+}
+
+// <<<============ SERVICES ============>>>
+
+.services-list {
+  list-style-position: inside;
+  list-style: circle;
+  font-size: 1.2rem;
+}
+
+.services-item {
+  margin-bottom: 16px;
+}
+
+// <<<============ RESTOURANT ============>>>
+
+.restourant {
+  background: $gray-200;
+}
+
+// <<<============ REVIEWS ============>>>
+
+.reviews {
+  .review {
+    padding: 20px 30px;
+    border: 1px solid $gray-300;
+    border-radius: 15px;
+    height: 100%;
+
+    .review-header {
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
+
+      .reviewer {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .name {
+          font-family: 'Raleway';
+          ;
+        }
+
+        .avatar {
+          margin-right: 1.5rem;
+          width: 3.5rem;
+          height: 3.5rem;
+          border-radius: 50vh;
+          border: 2px solid $white;
+          -webkit-box-shadow: 0 0 0 2px $primary;
+          -moz-box-shadow: 0 0 0 2px $primary;
+          box-shadow: 0 0 0 2px $primary;
+        }
+      }
+
+    }
+  }
+}
+
+// <<<============ FOOTER ============>>>
+
+.footer {
+  background-color: $dark;
+  padding: 3rem 0;
+}
+
+.footer-list-item {
+  margin-bottom: .4rem;
+}
+
+.footer-list-link {
+  color: $white;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 1px solid $gray-600;
+}
+
+.footer-social li:not(:last-child) {
+  padding-right: 1rem;
+}
+
+.footer-social img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+
+@media screen and (max-width: 1039px) {
+  .splider-img {
+    width: 100%;
+  }
+
+  .splide-text {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 859px) {
+  .header .nav-header {
+    clip-path: polygon(100% 0%, 100% 85%, 50% 100%, 0% 85%, 0% 0%);
+  }
+}
+
+@media screen and (max-width: 679px) {
+  .review-header {
+    flex-flow: column !important;
+  }
+
+  .reviewer {
+    flex-flow: column !important;
+
+    .avatar {
+      margin-bottom: 1rem !important;
+    }
+  }
+}
+
+
+
+// <<<============ BOOTSTRAP ============>>>

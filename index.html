@@ -2,119 +2,548 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Гостиничный комплекс</title>
-  <link href="//cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
-  <link rel="stylesheet" href="style/css/style.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Гостиничный комплекс</title>
+	<link href="//cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+	<script src="//cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+	<link rel="stylesheet" href="style/css/style.css">
 </head>
 
 <body>
 
-  <header class="header">
-    <div class="nav-header mb-5 position-relative">
-      <nav class="navbar navbar-expand-lg pt-4">
-        <div class="container">
-          <a class="navbar-brand text-uppercase align-items-center d-flex" href="#">
-            <img src="img/logo.svg" alt="" class="me-2">
-            <span class="text-white fs-3 secondary-font">rent</span><span class="text-primary fs-3 fw-semibold secondary-font">крым</span>
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarText">
-            <p class="navbar-text text-white secondary-font fw-normal me-auto p-0 m-0">
-              Экспресс-подбор <br>
-              жилья по самым низким ценам
-            </p>
-            <ul class="navbar-nav">
-              <li class="nav-item"><a href="#" class="nav-link" id="phone-number">8 (800) 500-56-55</a></li>
-              <li class="nav-item">
-                <a href="#" class="nav-link ps-3">
-                  <img src="img/telegram.svg" alt="Telegram">
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link ps-3">
-                  <img src="img/whatsapp.svg" alt="WhatsApp">
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link ps-3">
-                  <img src="img/viber.svg" alt="Viber">
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <div class="nav-header_text mb-5 text-center text-white">
-        <h2 class="fw-bold text-uppercase mb-3">Жилье в Северодвинске</h2>
-        <p>У нас есть <span class="fs-5">450</span> предложений для Вас</p>
-      </div>
-      <div class="container">
-        <div class="nav-header_form">
-          <div class="row row-cols-xl-5 row-cols-2 align-items-center px-0 px-xl-5">
-            <div class="col">
-              <div class="form-item my-3 my-xl-0 w-100 form-floating">
-                <input id="Input-check-in" class="form-control form-control-lg" type="date" aria-label="check-in">
-                <label for="Input-check-in">Заезд</label>
-              </div>
-            </div>
-            <div class="col">
-              <div class="form-item my-3 my-xl-0 w-100 form-floating">
-                <input id="Input-check-out" class="form-control form-control-lg" type="date" aria-label="check-out">
-                <label for="Input-check-out">Выезд</label>
-              </div>
-            </div>
-            <div class="col">
-              <div class="form-item my-3 my-xl-0 w-100 form-floating">
-                <input id="Input-guest-count" class="form-control form-control-lg" type="number" min="1" max="20" aria-label="Input-guest-count" placeholder="1">
-                <label for="Input-guest-count">Кол-во гостей</label>
-              </div>
-            </div>
-            <div class="col">
-              <div class="form-item my-3 my-xl-0 w-100 form-floating">
-                <input id="Input-room-count" class="form-control form-control-lg" type="number" min="1" max="10" aria-label="Input-room-count" placeholder="1">
-                <label for="Input-room-count">Кол-во комнат</label>
-              </div>
-            </div>
-            <div class="col-xl col-6 mx-auto">
-              <div class="form-item my-3 my-xl-0 w-100">
-                <button class="btn btn-primary w-100 text-white py-3">Найти жилье</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img src="img/arrow-down.svg" class="header_arrow-down" alt="">
-    </div>
-    <div class="advantages pb-5">
-      <div class="container">
-        <div class="row row-cols-1 row-cols-lg-3">
-          <div class="col align-items-center justify-content-between d-flex flex-column">
-            <img src="img/advantages-1.svg" alt="advantages-1">
-            <h3 class="text-center text-white my-4 secondary-font">Lorem, ipsum dolor.</h3>
-            <p class="text-center text-white fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet soluta sint, earum eveniet ipsa cupiditate perspiciatis nobis obcaecati minima iusto blanditiis adipisci veniam porro quia!</p>
-          </div>
-          <div class="col align-items-center justify-content-between d-flex flex-column">
-            <img src="img/advantages-2.svg" alt="advantages-2">
-            <h3 class="text-center text-white my-4 secondary-font">Lorem, ipsum dolor.</h3>
-            <p class="text-center text-white fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet soluta sint, earum eveniet ipsa cupiditate perspiciatis nobis obcaecati minima iusto blanditiis adipisci veniam porro quia!</p>
-          </div>
-          <div class="col align-items-center justify-content-between d-flex flex-column">
-            <img src="img/advantages-3.svg" alt="advantages-3">
-            <h3 class="text-center text-white my-4 secondary-font">Lorem, ipsum dolor.</h3>
-            <p class="text-center text-white fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet soluta sint, earum eveniet ipsa cupiditate perspiciatis nobis obcaecati minima iusto blanditiis adipisci veniam porro quia!</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
-  </script>
+	<header class="header">
+		<div class="nav-header mb-5 position-relative">
+			<nav class="navbar navbar-expand-lg pt-4">
+				<div class="container">
+					<a class="navbar-brand text-uppercase align-items-center d-flex" href="#">
+						<img src="img/logo.svg" class="me-2">
+						<span class="text-white fs-3 me-2 secondary-font">БЕЛЫЕ</span><span class="text-primary fs-3 fw-semibold secondary-font">НОЧИ</span>
+					</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarText">
+						<p class="navbar-text text-white secondary-font fw-normal me-auto p-0 m-0">
+							Бюджетный гостиничний комплекс <br>
+							по самым низким ценам
+						</p>
+						<ul class="navbar-nav">
+							<li class="nav-item"><a href="#" class="nav-link" id="phone-number">8 (800) 500-56-55</a></li>
+							<li class="nav-item">
+								<a href="#" class="nav-link ps-3">
+									<img src="img/telegram.svg" alt="Telegram">
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link ps-3">
+									<img src="img/whatsapp.svg" alt="WhatsApp">
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link ps-3">
+									<img src="img/viber.svg" alt="Viber">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<div class="nav-header_text mb-5 text-center text-white">
+				<h2 class="fw-bold text-uppercase mb-3">Жилье в Северодвинске</h2>
+				<p>У нас есть <span class="fs-5">450</span> предложений для Вас</p>
+			</div>
+			<div class="container">
+				<div class="nav-header_form">
+					<div class="row row-cols-xl-5 row-cols-1 row-cols-sm-2 align-items-center px-0 px-xl-5">
+						<div class="col">
+							<div class="form-item my-3 my-xl-0 w-100 form-floating">
+								<input id="Input-check-in" class="form-control form-control-lg" type="date" aria-label="check-in">
+								<label for="Input-check-in">Заезд</label>
+							</div>
+						</div>
+						<div class="col">
+							<div class="form-item my-3 my-xl-0 w-100 form-floating">
+								<input id="Input-check-out" class="form-control form-control-lg" type="date" aria-label="check-out">
+								<label for="Input-check-out">Выезд</label>
+							</div>
+						</div>
+						<div class="col">
+							<div class="form-item my-3 my-xl-0 w-100 form-floating">
+								<input id="Input-guest-count" class="form-control form-control-lg" type="number" min="1" max="20" aria-label="Input-guest-count" placeholder="1">
+								<label for="Input-guest-count">Кол-во гостей</label>
+							</div>
+						</div>
+						<div class="col">
+							<div class="form-item my-3 my-xl-0 w-100 form-floating">
+								<input id="Input-room-count" class="form-control form-control-lg" type="number" min="1" max="10" aria-label="Input-room-count" placeholder="1">
+								<label for="Input-room-count">Кол-во комнат</label>
+							</div>
+						</div>
+						<div class="col-xl col-6 mx-auto">
+							<div class="form-item my-3 my-xl-0 w-100">
+								<button class="btn btn-primary w-100 text-white py-3">Найти жилье</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<img src="img/arrow-down.svg" class="header_arrow-down">
+		</div>
+		<div class="advantages pb-5">
+			<div class="container">
+				<div class="row row-cols-1 row-cols-lg-3">
+					<div class="col align-items-center justify-content-between d-flex flex-column">
+						<img src="img/advantages-1.svg" alt="advantages-1">
+						<h3 class="text-center text-white my-4 secondary-font">Выгодные цены</h3>
+						<p class="text-center text-white fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet soluta sint, earum eveniet ipsa cupiditate perspiciatis nobis obcaecati minima iusto blanditiis adipisci veniam porro quia!</p>
+					</div>
+					<div class="col align-items-center justify-content-between d-flex flex-column">
+						<img src="img/advantages-2.svg" alt="advantages-2">
+						<h3 class="text-center text-white my-4 secondary-font">Качественные номера</h3>
+						<p class="text-center text-white fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet soluta sint, earum eveniet ipsa cupiditate perspiciatis nobis obcaecati minima iusto blanditiis adipisci veniam porro quia!</p>
+					</div>
+					<div class="col align-items-center justify-content-between d-flex flex-column">
+						<img src="img/advantages-3.svg" alt="advantages-3">
+						<h3 class="text-center text-white my-4 secondary-font">Скидки новым клиентам</h3>
+						<p class="text-center text-white fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet soluta sint, earum eveniet ipsa cupiditate perspiciatis nobis obcaecati minima iusto blanditiis adipisci veniam porro quia!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<section class="rooms">
+			<div class="container">
+				<h2 class="mb-5 text-uppercase text-center secondary-font">Номера</h2>
+				<div class="splide" role="group" aria-label="rooms slider">
+					<div class="splide__arrows d-none d-xl-block">
+						<button class="splide__arrow splide__arrow--prev">
+							<img src="img/slider-arrow-l.svg">
+						</button>
+						<button class="splide__arrow splide__arrow--next">
+							<img src="img/slider-arrow-r.svg">
+						</button>
+					</div>
+					<div class="splide__track">
+						<ul class="splide__list">
+							<li class="splide__slide d-flex align-items-start flex-column-reverse flex-xl-row justify-content-between">
+								<div class="splide-text pb-5 pb-xl-3 p-2 ps-lg-5 ps-3 pt-4">
+									<h3 class="title">Одноместные</h3>
+									<ul class="type-list list-unstyled">
+										<li class="type-item fs-6">
+											Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, nostrum est! Ut, in illum.
+											<a href="#" class="type-link small">Подробнее...</a>
+										</li>
+										<li class="type-item fs-6">
+											Lorem ipsum dolor sit.
+											<a href="#" class="type-link small">Подробнее...</a>
+										</li>
+										<li class="type-item fs-6">
+											Lorem ipsum dolor sit.
+											<a href="#" class="type-link small">Подробнее...</a>
+										</li>
+									</ul>
+									<button class="btn btn-primary btn-lg px-5 text-uppercase text-white">Забронировать</button>
+								</div>
+								<img src="img/rooms/standart-slider.jpg" class="splider-img img-fluid">
+							</li>
+							<li class="splide__slide d-flex align-items-start flex-column-reverse flex-xl-row justify-content-between">
+								<div class="splide-text pb-5 pb-xl-3 p-2 ps-lg-5 ps-3 pt-4">
+									<h3 class="title">Деловой</h3>
+									<ul class="type-list list-unstyled">
+										<li class="type-item fs-6">
+											Lorem ipsum dolor sit.
+											<a href="#" class="type-link small">Подробнее...</a>
+										</li>
+										<li class="type-item fs-6">
+											Lorem ipsum dolor sit.
+											<a href="#" class="type-link small">Подробнее...</a>
+										</li>
+										<li class="type-item fs-6">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, consequatur?
+											<a href="#" class="type-link small">Подробнее...</a>
+										</li>
+									</ul>
+									<button class="btn btn-primary btn-lg px-5 text-uppercase text-white">Забронировать</button>
+								</div>
+								<img src="img/rooms/deal-slider.jpg" class="splider-img img-fluid">
+							</li>
+							<li class="splide__slide d-flex align-items-start flex-column-reverse flex-xl-row justify-content-between">
+								<div class="splide-text pb-5 pb-xl-3 p-2 ps-lg-5 ps-3 pt-4">
+									<h3 class="title">Бизнес</h3>
+									<ul class="type-list list-unstyled">
+										<li class="type-item fs-6">
+											Lorem ipsum dolor sit.
+											<a href="#" class="type-link small">Подробнее...</a>
+										</li>
+										<li class="type-item fs-6">
+											Lorem ipsum dolor sit, amet consectetur adipisicing.
+											<a href="#" class="type-link small">Подробнее...</a>
+										</li>
+									</ul>
+									<button class="btn btn-primary btn-lg px-5 text-uppercase text-white">Забронировать</button>
+								</div>
+								<img src="img/rooms/buisness-slider.jpg" class="splider-img img-fluid">
+							</li>
+							<li class="splide__slide d-flex align-items-start flex-column-reverse flex-xl-row justify-content-between">
+								<div class="splide-text pb-5 pb-xl-3 p-2 ps-lg-5 ps-3 pt-4">
+									<h3 class="title">Двойной / Double</h3>
+									<ul class="type-list list-unstyled">
+										<li class="type-item fs-6">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit.
+											<a href="#" class="type-link small">Подробнее...</a>
+										</li>
+										<li class="type-item fs-6">
+											Lorem ipsum dolor sit.
+											<a href="#" class="type-link small">Подробнее...</a>
+										</li>
+										<li class="type-item fs-6">
+											Lorem, ipsum dolor.
+											<a href="#" class="type-link small">Подробнее...</a>
+										</li>
+									</ul>
+									<button class="btn btn-primary btn-lg px-5 text-uppercase text-white">Забронировать</button>
+								</div>
+								<img src="img/rooms/double-sliderjpg.jpg" class="splider-img img-fluid">
+							</li>
+							<li class="splide__slide d-flex align-items-start flex-column-reverse flex-xl-row justify-content-between">
+								<div class="splide-text pb-5 pb-xl-3 p-3 ps-lg-5 ps-3 pt-4">
+									<h3 class="title">Одноместный ПЛЮС / Plus</h3>
+									<ul class="type-list list-unstyled">
+										<li class="type-item fs-6">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus!
+											<a href="#" class="type-link small">Подробнее...</a>
+										</li>
+										<li class="type-item fs-6">
+											Lorem ipsum dolor sit.
+											<a href="#" class="type-link small">Подробнее...</a>
+										</li>
+									</ul>
+									<button class="btn btn-primary btn-lg px-5 text-uppercase text-white">Забронировать</button>
+								</div>
+								<img src="img/rooms/plus-slider.jpg" class="splider-img img-fluid">
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="about">
+			<div class="container">
+				<h2 class="text-uppercase secondary-font text-center mb-5">Преимущества гостиничного комплекса</h2>
+				<div class="row row-cols-1 row-cols-lg-2 gy-5 gx-0 g-lg-5 row-cols-xl-3">
+					<div class="col">
+						<div class="about_item d-flex flex-column align-items-center text-center">
+							<img src="img/about/location.svg" class="img-fluid mb-3 about-icon">
+							<h3 class="secondary-font mb-4">Местоположение в центре</h3>
+							<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A sunt exercitationem at, delectus placeat fugiat. Eligendi dignissimos provident omnis aliquid.</p>
+						</div>
+					</div>
+					<div class="col">
+						<div class="about_item d-flex flex-column align-items-center text-center">
+							<img src="img/about/wi-fi.svg" class="img-fluid mb-3 about-icon">
+							<h3 class="secondary-font mb-4">Высокий уровень оснащенности номеров</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis repellat libero, quaerat dolore reiciendis expedita adipisci porro, praesentium, nam numquam ratione pariatur nesciunt doloribus?</p>
+						</div>
+					</div>
+					<div class="col">
+						<div class="about_item d-flex flex-column align-items-center text-center">
+							<img src="img/about/coffee.svg" class="img-fluid mb-3 about-icon">
+							<h3 class="secondary-font mb-4">Кафе</h3>
+							<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A sunt exercitationem at, delectus placeat fugiat. Eligendi dignissimos provident omnis aliquid.</p>
+						</div>
+					</div>
+					<div class="col">
+						<div class="about_item d-flex flex-column align-items-center text-center">
+							<img src="img/about/calendar.svg" class="img-fluid mb-3 about-icon">
+							<h3 class="secondary-font mb-4">Организация деловых мероприятий</h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At minima saepe ipsa, quod recusandae, sequi nisi quidem, quam minus aliquam in sint corrupti cupiditate autem reiciendis ex iure sit obcaecati? Inventore architecto quia, illo ipsa ipsum culpa vitae dolor molestias?</p>
+						</div>
+					</div>
+					<div class="col">
+						<div class="about_item d-flex flex-column align-items-center text-center">
+							<img src="img/about/rooms.svg" class="img-fluid mb-3 about-icon">
+							<h3 class="secondary-font mb-4">Широкий выбор номеров</h3>
+							<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A sunt exercitationem at, delectus placeat fugiat. Eligendi dignissimos provident omnis aliquid.</p>
+						</div>
+					</div>
+					<div class="col">
+						<div class="about_item d-flex flex-column align-items-center text-center">
+							<img src="img/about/communications.svg" class="img-fluid mb-3 about-icon">
+							<h3 class="secondary-font mb-4">Быстрая помощь в решении вопросов</h3>
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque sapiente nemo provident. Amet voluptatibus adipisci rem odit sint sit deleniti ipsum vero eos. Nesciunt!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="services">
+			<div class="container">
+				<div class="row row-cols-1 row-cols-lg-2">
+					<div class="col">
+						<h3 class="mb-4">Бесплатные услуги</h3>
+						<ul class="services-list ps-3">
+							<li class="services-item">Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+							<li class="services-item">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
+							<li class="services-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa eaque totam magnam quaerat?</li>
+							<li class="services-item">Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+							<li class="services-item">Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+							<li class="services-item">Lorem ipsum dolor sit amet.</li>
+						</ul>
+					</div>
+					<div class="col">
+						<h3 class="mb-4">Платные услуги</h3>
+						<ul class="services-list ps-3">
+							<li class="services-item">Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+							<li class="services-item">Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+							<li class="services-item">Lorem ipsum dolor sit amet.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="restourant">
+			<div class="container">
+				<h2 class="mb-5 secondary-font text-center text-uppercase">Кафе</h2>
+				<div class="d-flex align-items-start flex-column mb-5 justify-content-between">
+					<p class="mb-5">Обновленное Меню кафе понравится и любителям плотно поесть, и приверженцам вегетарианской диеты, и самым маленьким посетителям кафе. Здесь представлен огромный ассортимент рыбных, мясных блюд, салатов, закусок, супов, гарниров, десертов, созданных руками профессиональных поваров.</p>
+					<ul class="list-unstyled fs-5">
+						<li>Будни: 7:00 → 23:00</li>
+						<li>СБ: 9:00 → 00:00</li>
+						<li>ВС: 10:00 → 2:00</li>
+					</ul>
+				</div>
+
+				<div class="row mb-5 row-cols-1 row-cols-xl-2 gy-5">
+					<div class="col">
+						<a href="#" class="menu-view">
+							<img src="img/restourant-img-1.jpg" class="img-fluid">
+						</a>
+					</div>
+					<div class="col">
+						<a href="#" class="menu-view">
+							<img src="img/restourant-img-2.jpg" class="img-fluid">
+						</a>
+					</div>
+				</div>
+
+				<button type="button" class="d-block mx-auto btn btn-primary btn-lg px-5 text-white" data-bs-toggle="modal" data-bs-target="#restourant-menu">Посмотреть меню</button>
+			</div>
+		</section>
+
+		<section class="reviews">
+			<div class="container">
+				<h2 class="secondary-font text-center text-uppercase mb-5">Отзывы клиентов</h2>
+				<div class="row row-cols-1 row-cols-xl-2 gy-4">
+					<div class="col">
+						<div class="review">
+							<div class="review-header">
+								<div class="reviewer">
+									<img src="img/avatar-1.png" class="avatar">
+									<h4 class="name m-0">Yulianna Belinsky</h4>
+								</div>
+								<div class="review-rate">
+									<img src="img/review-star-active.svg">
+									<img src="img/review-star-active.svg">
+									<img src="img/review-star-active.svg">
+									<img src="img/review-star-active.svg">
+									<img src="img/review-star-not-active.svg">
+								</div>
+							</div>
+							<p class="review-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero minima quas at repellendus sed qui velit suscipit quos quaerat quae!</p>
+						</div>
+					</div>
+					<div class="col">
+						<div class="review">
+							<div class="review-header">
+								<div class="reviewer">
+									<img src="img/avatar-3.png" class="avatar">
+									<h4 class="name m-0">Nikolai Lazaroff</h4>
+								</div>
+								<div class="review-rate">
+									<img src="img/review-star-active.svg">
+									<img src="img/review-star-active.svg">
+									<img src="img/review-star-active.svg">
+									<img src="img/review-star-active.svg">
+									<img src="img/review-star-not-active.svg">
+								</div>
+							</div>
+							<p class="review-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias tempora aliquid distinctio fuga laborum. Ipsam libero nobis voluptatum suscipit ullam iure architecto quas doloribus est officia cumque tempore tempora, distinctio quasi atque hic temporibus corporis nihil reiciendis? Laborum obcaecati quis accusamus? Ratione aliquam delectus nobis similique.</p>
+						</div>
+					</div>
+					<div class="col">
+						<div class="review">
+							<div class="review-header">
+								<div class="reviewer">
+									<img src="img/avatar-2.png" class="avatar">
+									<h4 class="name m-0">Marja Belsky</h4>
+								</div>
+								<div class="review-rate">
+									<img src="img/review-star-active.svg">
+									<img src="img/review-star-active.svg">
+									<img src="img/review-star-active.svg">
+									<img src="img/review-star-active.svg">
+									<img src="img/review-star-active.svg">
+								</div>
+							</div>
+							<p class="review-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia aspernatur laborum hic error perspiciatis quod mollitia iusto magni reiciendis quisquam blanditiis commodi, non, incidunt ullam qui voluptatibus, saepe earum! Eveniet laudantium eligendi laborum nam?</p>
+						</div>
+					</div>
+					<div class="col">
+						<div class="review">
+							<div class="review-header">
+								<div class="reviewer">
+									<img src="img/avatar-4.png" class="avatar">
+									<h4 class="name m-0">Roman Kuznetsov</h4>
+								</div>
+								<div class="review-rate">
+									<img src="img/review-star-active.svg">
+									<img src="img/review-star-active.svg">
+									<img src="img/review-star-active.svg">
+									<img src="img/review-star-active.svg">
+									<img src="img/review-star-active.svg">
+								</div>
+							</div>
+							<p class="review-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quas tempora reiciendis ipsum.</p>
+						</div>
+					</div>
+					<div class="col">
+						<div class="review">
+							<div class="review-header">
+								<div class="reviewer">
+									<img src="img/avatar-3.png" class="avatar">
+									<h4 class="name m-0">Martin Duskin</h4>
+								</div>
+								<div class="review-rate">
+									<img src="img/review-star-active.svg">
+									<img src="img/review-star-active.svg">
+									<img src="img/review-star-active.svg">
+									<img src="img/review-star-not-active.svg">
+									<img src="img/review-star-not-active.svg">
+								</div>
+							</div>
+							<p class="review-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sequi aperiam voluptatibus nostrum, a possimus doloremque, alias nihil eaque dolore fugit, quo est officia? Cumque provident adipisci dolores necessitatibus quis, cupiditate minima ratione aliquam aspernatur illum?</p>
+						</div>
+					</div>
+					<div class="col">
+						<div class="review">
+							<div class="review-header">
+								<div class="reviewer">
+									<img src="img/avatar-1.png" class="avatar">
+									<h4 class="name m-0">Olga Maslow</h4>
+								</div>
+								<div class="review-rate">
+									<img src="img/review-star-active.svg">
+									<img src="img/review-star-active.svg">
+									<img src="img/review-star-active.svg">
+									<img src="img/review-star-active.svg">
+									<img src="img/review-star-not-active.svg">
+								</div>
+							</div>
+							<p class="review-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero minima quas at repellendus sed qui velit suscipit quos quaerat quae!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer text-white">
+		<div class="container">
+			<div class="row row-cols-1 gy-4 row-cols-lg-2">
+				<div class="col">
+					<a class="navbar-brand text-uppercase align-items-center mb-4 d-flex" href="#">
+						<img src="img/logo.svg" class="me-2">
+						<span class="text-white fs-3 me-2 secondary-font">БЕЛЫЕ</span><span class="text-primary fs-3 fw-semibold secondary-font">НОЧИ</span>
+					</a>
+					<a href="#" class="text-decoration-none fs-5 text-white">8 (800) 500-56-55</a>
+				</div>
+				<div class="col">
+					<small class="secondary-font fw-bold text-uppercase">Обзор</small>
+					<ul class="footer-list list-unstyled">
+						<li class="footer-list-item"><a href="#" class="footer-list-link">Lorem, ipsum dolor.</a></li>
+						<li class="footer-list-item"><a href="#" class="footer-list-link">Lorem, ipsum dolor.</a></li>
+						<li class="footer-list-item"><a href="#" class="footer-list-link">Lorem ipsum dolor sit amet consectetur.</a></li>
+						<li class="footer-list-item"><a href="#" class="footer-list-link">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></li>
+					</ul>
+				</div>
+				<div class="col">
+					<small class="secondary-font fw-bold text-uppercase">В социальных сетях</small>
+					<ul class="footer-list list-unstyled d-flex align-items-start footer-social">
+						<li class="footer-list-item">
+							<a href="#" class="footer-list-link border-0">
+								<img src="img/social/Vk.svg" alt="Social-link">
+							</a>
+						</li>
+						<li class="footer-list-item">
+							<a href="#" class="footer-list-link border-0">
+								<img src="img/social/Telegram.svg" alt="Social-link">
+							</a>
+						</li>
+						<li class="footer-list-item">
+							<a href="#" class="footer-list-link border-0">
+								<img src="img/social/Whatsapp.svg" alt="Social-link">
+							</a>
+						</li>
+						<li class="footer-list-item">
+							<a href="#" class="footer-list-link border-0">
+								<img src="img/social/Youtube.svg" alt="Social-link">
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col">
+					<small class="secondary-font fw-bold text-uppercase">© "Белые Ночи", 2022</small>
+					<ul class="footer-list list-unstyled">
+						<li class="footer-list-item"><a href="#" class="footer-list-link">Условия использования</a></li>
+						<li class="footer-list-item"><a href="#" class="footer-list-link">Конфиден­циальность</a></li>
+						<li class="footer-list-item"><a href="#" class="footer-list-link">Вакансии</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- MODAL -->
+
+	<div class="modal fade" id="restourant-menu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title" id="restourant-menuLabel">Меню кафе</h2>
+					<button type="button" class="btn-close btn-lg" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<img src="img/restourant_menu.jpg" class="mb-4" style="width: 100%;">
+					<img src="img/restourant_menu-2.jpg" class="mb-4" style="width: 100%;">
+					<img src="img/restourant_menu-3.jpg" class="mb-4" style="width: 100%;">
+					<img src="img/restourant_menu-4.jpg" class="mb-4" style="width: 100%;">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary text-white btn-lg" data-bs-dismiss="modal">Закрыть</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+		let splider = new Splide('.splide', {
+			type: 'loop',
+			// padding: '7rem',
+			drag: true,
+		});
+		splider.mount();
+	</script>
+	<script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+	</script>
 </body>
 
 </html>
