@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap');
-@import "../../node_modules/bootstrap/scss/functions";
+@import '../../node_modules/bootstrap/scss/functions';
 // <<<============ VARIABLES ============>>>
 
-// font-color: #6B7984
 $primary: #039be5;
 $body-color: #393939;
-// $enable-gradients: true;
 $font-family-sans-serif: 'Roboto',
 system-ui,
 -apple-system,
@@ -22,6 +20,8 @@ sans-serif,
 'Segoe UI Symbol',
 'Noto Color Emoji' !default;
 
+$container-padding-x: 2rem;
+
 $container-max-widths: (sm: 450px,
   md: 680px,
   lg: 860px,
@@ -36,10 +36,10 @@ $grid-breakpoints: (xs: 0,
   xxl: 1300px,
 );
 
-$grid-columns: 14;
+// $grid-columns: 14;
 
-@import "../../node_modules/bootstrap/scss/variables";
-@import "../../node_modules/bootstrap/scss/bootstrap";
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/bootstrap';
 
 // <<<============ STYLES ============>>>
 
@@ -51,6 +51,10 @@ body {
 
 .secondary-font {
   font-family: 'Raleway';
+}
+
+main {
+  overflow: hidden;
 }
 
 section {
@@ -69,17 +73,50 @@ section {
 .header {
   // height: 65rem;
   background: #039be5;
-  background: -webkit-linear-gradient(0deg, #039be5 0%, #076ecd 50%, #076ecd 100%);
+  background: -webkit-linear-gradient(0deg,
+      #039be5 0%,
+      #076ecd 50%,
+      #076ecd 100%);
   background: linear-gradient(0deg, #039be5 0%, #076ecd 50%, #076ecd 100%);
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.25);
 
+  .nav-item:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+
+  .nav-link {
+    display: inline;
+    text-transform: uppercase;
+    color: $white;
+    position: relative;
+    padding: 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: $primary;
+      visibility: hidden;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover::before {
+      visibility: visible;
+      width: 100%;
+    }
+  }
+
   .nav-header {
     // height: 50%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../../img/header-bcg.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+      url(../../img/header-bcg.png);
     background-repeat: no-repeat;
     background-size: cover, cover;
     background-position: center;
-    clip-path: polygon(100% 0%, 100% 65%, 50% 100%, 0% 65%, 0% 0%);
+    clip-path: polygon(100% 0%, 100% 75%, 50% 100%, 0% 75%, 0% 0%);
     padding-bottom: 10rem;
 
     .navbar {
@@ -106,9 +143,39 @@ section {
 }
 
 #phone-number {
-  font-size: 20px;
-  color: #fff;
-  font-weight: 500;
+  margin-right: auto;
+}
+
+.custom-navbar-toggler-icon {
+  display: block;
+  width: 45px;
+  height: 4px;
+  border-radius: 50vh;
+  background: $light;
+  position: relative;
+
+  &::after,
+  &::before {
+    content: '';
+    display: block;
+    width: 45px;
+    height: 4px;
+    border-radius: 50vh;
+    background: $light;
+    position: absolute;
+  }
+
+  &::after {
+    top: -0.8rem;
+  }
+
+  &::before {
+    bottom: -0.8rem;
+  }
+}
+
+.navbar-toggler {
+  padding: 1.3rem 1rem;
 }
 
 // <<<============ ROOMS ============>>>
@@ -118,7 +185,7 @@ section {
     bottom: -3em;
 
     li {
-      margin: 0 .3em;
+      margin: 0 0.3em;
     }
   }
 
@@ -159,7 +226,7 @@ section {
   }
 
   .type-item:not(:last-child) {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 
   .type-item:last-child {
@@ -213,6 +280,31 @@ section {
   background: $gray-200;
 }
 
+.working-table {
+  td {
+    padding-bottom: 0.5rem;
+  }
+
+  tr {
+    padding-bottom: 1rem;
+
+    & td:first-child {
+      padding-right: 1.3rem;
+    }
+
+    & td:not(:first-child) {
+      padding-right: 0.7rem;
+    }
+
+    & td:nth-child(2) {
+      &::after {
+        padding-left: 0.7rem;
+        content: '→';
+      }
+    }
+  }
+}
+
 // <<<============ REVIEWS ============>>>
 
 .reviews {
@@ -237,7 +329,6 @@ section {
 
         .name {
           font-family: 'Raleway';
-          ;
         }
 
         .avatar {
@@ -251,7 +342,6 @@ section {
           box-shadow: 0 0 0 2px $primary;
         }
       }
-
     }
   }
 }
@@ -264,7 +354,7 @@ section {
 }
 
 .footer-list-item {
-  margin-bottom: .4rem;
+  margin-bottom: 0.4rem;
 }
 
 .footer-list-link {
@@ -283,6 +373,25 @@ section {
   height: 2.5rem;
 }
 
+@media screen and (max-width: 1299px) {
+  .header .nav-header {
+    clip-path: polygon(100% 0%, 100% 85%, 50% 100%, 0% 85%, 0% 0%);
+  }
+
+  .nav-link {
+    font-size: 1.5rem;
+  }
+
+  .nav-item {
+    &:not(:last-child) {
+      margin-bottom: 0.7rem;
+    }
+  }
+
+  .navbar-nav {
+    margin-top: 1.2rem;
+  }
+}
 
 @media screen and (max-width: 1039px) {
   .splider-img {
@@ -296,7 +405,7 @@ section {
 
 @media screen and (max-width: 859px) {
   .header .nav-header {
-    clip-path: polygon(100% 0%, 100% 85%, 50% 100%, 0% 85%, 0% 0%);
+    clip-path: polygon(100% 0%, 100% 90%, 50% 100%, 0% 90%, 0% 0%);
   }
 }
 
@@ -313,7 +422,5 @@ section {
     }
   }
 }
-
-
 
 // <<<============ BOOTSTRAP ============>>>
