@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Гостиничный комплекс</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+		<link rel="stylesheet" href="style/css/style.css" />
+		<link rel="stylesheet" href="style/css/rooms.css" />
+	</head>
+
+	<body>
+		<header class="header position-fixed">
+			<nav class="navbar navbar-expand-xxl py-4">
+				<div class="container">
+					<a class="navbar-brand text-uppercase align-items-center d-flex" href="#">
+						<img src="img/logo.svg" class="me-2" />
+						<span class="text-white fs-3 me-2 secondary-font">БЕЛЫЕ</span
+						><span class="text-primary fs-3 fw-semibold secondary-font">НОЧИ</span>
+					</a>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarText"
+						aria-controls="navbarText"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="custom-navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarText">
+						<a href="#" class="nav-link text-white fs-3" id="phone-number">8 (800) 500-56-55</a>
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a href="./index.html" class="nav-link">Главная</a>
+							</li>
+							<li class="nav-item">
+								<a href="./rooms.html" class="nav-link active">Номера</a>
+							</li>
+							<li class="nav-item">
+								<a href="./services.html" class="nav-link">Услуги</a>
+							</li>
+							<li class="nav-item">
+								<a href="./aboutUs.html" class="nav-link">О нас</a>
+							</li>
+							<li class="nav-item">
+								<a href="./contacts.html" class="nav-link">Контакты</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<section class="rooms-info">
+				<div class="container g-0">
+					<h2 class="my-5 text-uppercase text-center secondary-font">Номера</h2>
+					<div class="row g-0 row-cols-2">
+						<div class="col room-img">
+							<img src="./img/rooms/standart-slider.jpg" alt="Standart" class="img-fluid w-100" />
+						</div>
+						<div class="col room-label d-flex flex-column p-4 justify-content-between align-items-start">
+							<h2 class="secondary-font">Стандартный номер</h2>
+							<ul class="row g-2 row-cols-2">
+								<li class="col">Бесплатый Wi-Fi</li>
+								<li class="col">Одна двухспальная кровать</li>
+								<li class="col">Душ, туалет</li>
+								<li class="col">Lorem, ipsum dolor.</li>
+								<li class="col">Lorem ipsum dolor sit amet consectetur.</li>
+								<li class="col">Lorem ipsum dolor sit.</li>
+							</ul>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ducimus natus numquam, incidunt
+								sapiente facere totam sed, <b>omnis odio fugit</b> aliquid ipsa ut temporibus aspernatur quos? Eligendi,
+								error! Nemo, sit?
+							</p>
+							<button
+								data-bs-toggle="modal"
+								data-bs-target="#orderRoomModal"
+								class="order-btn btn btn-primary btn-lg px-5 text-uppercase text-white"
+							>
+								Забронировать
+							</button>
+						</div>
+					</div>
+					<div class="row g-0 row-cols-2 flex-row-reverse">
+						<div class="col room-img">
+							<img src="./img/rooms/deal-slider.jpg" alt="Standart" class="img-fluid w-100" />
+						</div>
+						<div class="col room-label d-flex flex-column p-4 justify-content-between align-items-end">
+							<h2 class="secondary-font">"Деловой" номер</h2>
+							<ul class="row g-2 row-cols-2">
+								<li class="col">Бесплатый Wi-Fi</li>
+								<li class="col">Одна двухспальная кровать</li>
+								<li class="col">Душ, туалет</li>
+								<li class="col">Lorem, ipsum dolor.</li>
+								<li class="col">Lorem ipsum dolor sit amet consectetur.</li>
+								<li class="col">Lorem ipsum dolor sit.</li>
+							</ul>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ducimus natus numquam, incidunt
+								sapiente facere totam sed, <b>omnis odio fugit</b> aliquid ipsa ut temporibus aspernatur quos? Eligendi,
+								error! Nemo, sit?
+							</p>
+							<button
+								data-bs-toggle="modal"
+								data-bs-target="#orderRoomModal"
+								class="order-btn btn btn-primary btn-lg px-5 text-uppercase text-white"
+							>
+								Забронировать
+							</button>
+						</div>
+					</div>
+					<div class="row g-0 row-cols-2">
+						<div class="col room-img">
+							<img src="./img/rooms/buisness-slider.jpg" alt="Standart" class="img-fluid w-100" />
+						</div>
+						<div class="col room-label d-flex flex-column p-4 justify-content-between align-items-start">
+							<h2 class="secondary-font">Бизнес</h2>
+							<ul class="row g-2 row-cols-2">
+								<li class="col">Бесплатый Wi-Fi</li>
+								<li class="col">Одна двухспальная кровать</li>
+								<li class="col">Душ, туалет</li>
+								<li class="col">Lorem, ipsum dolor.</li>
+								<li class="col">Lorem ipsum dolor sit amet consectetur.</li>
+								<li class="col">Lorem ipsum dolor sit.</li>
+							</ul>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ducimus natus numquam, incidunt
+								sapiente facere totam sed, <b>omnis odio fugit</b> aliquid ipsa ut temporibus aspernatur quos? Eligendi,
+								error! Nemo, sit?
+							</p>
+							<button
+								data-bs-toggle="modal"
+								data-bs-target="#orderRoomModal"
+								class="order-btn btn btn-primary btn-lg px-5 text-uppercase text-white"
+							>
+								Забронировать
+							</button>
+						</div>
+					</div>
+					<div class="row g-0 row-cols-2 flex-row-reverse">
+						<div class="col room-img">
+							<img src="./img/rooms/double-slider.jpg" alt="Standart" class="img-fluid w-100" />
+						</div>
+						<div class="col room-label d-flex flex-column p-4 justify-content-between align-items-end">
+							<h2 class="secondary-font">Двойной / Double</h2>
+							<ul class="row g-2 row-cols-2">
+								<li class="col">Бесплатый Wi-Fi</li>
+								<li class="col">Одна двухспальная кровать</li>
+								<li class="col">Душ, туалет</li>
+								<li class="col">Lorem, ipsum dolor.</li>
+								<li class="col">Lorem ipsum dolor sit amet consectetur.</li>
+								<li class="col">Lorem ipsum dolor sit.</li>
+							</ul>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ducimus natus numquam, incidunt
+								sapiente facere totam sed, <b>omnis odio fugit</b> aliquid ipsa ut temporibus aspernatur quos? Eligendi,
+								error! Nemo, sit?
+							</p>
+							<button
+								data-bs-toggle="modal"
+								data-bs-target="#orderRoomModal"
+								class="order-btn btn btn-primary btn-lg px-5 text-uppercase text-white"
+							>
+								Забронировать
+							</button>
+						</div>
+					</div>
+					<div class="row g-0 row-cols-2">
+						<div class="col room-img">
+							<img src="./img/rooms/plus-slider.jpg" alt="Standart" class="img-fluid w-100" />
+						</div>
+						<div class="col room-label d-flex flex-column p-4 justify-content-between align-items-start">
+							<h2 class="secondary-font">Одноместный ПЛЮС / Plus</h2>
+							<ul class="row g-2 row-cols-2">
+								<li class="col">Бесплатый Wi-Fi</li>
+								<li class="col">Одна двухспальная кровать</li>
+								<li class="col">Душ, туалет</li>
+								<li class="col">Lorem, ipsum dolor.</li>
+								<li class="col">Lorem ipsum dolor sit amet consectetur.</li>
+								<li class="col">Lorem ipsum dolor sit.</li>
+							</ul>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ducimus natus numquam, incidunt
+								sapiente facere totam sed, <b>omnis odio fugit</b> aliquid ipsa ut temporibus aspernatur quos? Eligendi,
+								error! Nemo, sit?
+							</p>
+							<button
+								data-bs-toggle="modal"
+								data-bs-target="#orderRoomModal"
+								class="order-btn btn btn-primary btn-lg px-5 text-uppercase text-white"
+							>
+								Забронировать
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="advantages">
+				<div class="container">
+					<div class="row g-4 row-cols-2">
+						<div class="col d-flex align-items-start justify-content-start">
+							<img src="./img/about/coffee.svg" alt="" class="img-fluid me-4" />
+							<div class="w-75">
+								<h4 class="secondary-font">Бесплатный завтрак и кофе</h4>
+								<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, temporibus?</p>
+							</div>
+						</div>
+						<div class="col d-flex align-items-start justify-content-start">
+							<img src="./img/about/calendar.svg" alt="" class="img-fluid me-4" />
+							<div class="w-75">
+								<h4 class="secondary-font">Конференц-зал</h4>
+								<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, temporibus?</p>
+							</div>
+						</div>
+						<div class="col d-flex align-items-start justify-content-start">
+							<img src="./img/about/location.svg" alt="" class="img-fluid me-4" />
+							<div class="w-75">
+								<h4 class="secondary-font">Круглосуточная парковка</h4>
+								<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, temporibus?</p>
+							</div>
+						</div>
+						<div class="col d-flex align-items-start justify-content-start">
+							<img src="./img/about/wi-fi.svg" alt="" class="img-fluid me-4" />
+							<div class="w-75">
+								<h4 class="secondary-font">Быстрый Wi-Fi</h4>
+								<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, temporibus?</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer text-white">
+			<div class="container">
+				<div class="row row-cols-1 gy-4 row-cols-lg-2">
+					<div class="col">
+						<a class="navbar-brand text-uppercase align-items-center mb-4 d-flex" href="#"
+							><img src="img/logo.svg" class="me-2" /><span class="text-white fs-3 me-2 secondary-font">БЕЛЫЕ</span
+							><span class="text-primary fs-3 fw-semibold secondary-font">НОЧИ</span></a
+						><a href="#" class="text-decoration-none fs-5 text-white">8 (800) 500-56-55</a>
+					</div>
+					<div class="col">
+						<small class="secondary-font fw-bold text-uppercase">Обзор</small>
+						<ul class="footer-list list-unstyled">
+							<li class="footer-list-item"><a href="#" class="footer-list-link">Lorem, ipsum dolor.</a></li>
+							<li class="footer-list-item"><a href="#" class="footer-list-link">Lorem, ipsum dolor.</a></li>
+							<li class="footer-list-item">
+								<a href="#" class="footer-list-link">Lorem ipsum dolor sit amet consectetur.</a>
+							</li>
+							<li class="footer-list-item">
+								<a href="#" class="footer-list-link">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col">
+						<small class="secondary-font fw-bold text-uppercase">В социальных сетях</small>
+						<ul class="footer-list list-unstyled d-flex align-items-start footer-social">
+							<li class="footer-list-item">
+								<a href="#" class="footer-list-link border-0"><img src="img/social/Vk.svg" alt="Social-link" /></a>
+							</li>
+							<li class="footer-list-item">
+								<a href="#" class="footer-list-link border-0"
+									><img src="img/social/Telegram.svg" alt="Social-link"
+								/></a>
+							</li>
+							<li class="footer-list-item">
+								<a href="#" class="footer-list-link border-0"
+									><img src="img/social/Whatsapp.svg" alt="Social-link"
+								/></a>
+							</li>
+							<li class="footer-list-item">
+								<a href="#" class="footer-list-link border-0"><img src="img/social/Youtube.svg" alt="Social-link" /></a>
+							</li>
+						</ul>
+					</div>
+					<div class="col">
+						<small class="secondary-font fw-bold text-uppercase">© "Белые Ночи", 2022</small>
+						<ul class="footer-list list-unstyled">
+							<li class="footer-list-item"><a href="#" class="footer-list-link">Условия использования</a></li>
+							<li class="footer-list-item"><a href="#" class="footer-list-link">Конфиден­циальность</a></li>
+							<li class="footer-list-item"><a href="#" class="footer-list-link">Вакансии</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- MODAL -->
+
+		<div class="modal fade" id="orderRoomModal" tabindex="-1" aria-labelledby="orderRoomModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="orderRoomModalLabel">Забронировать номер</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p class="small text-center mb-4">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis perferendis deserunt eum facilis eligendi,
+							repellat odio repudiandae accusamus cupiditate. Quo, ut hic voluptate quia esse modi qui excepturi
+							officiis. Fugiat?
+						</p>
+						<form action="" class="order-form">
+							<div class="mb-3 row">
+								<label for="orderName" class="col-sm-3 col-form-label">Имя:</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="orderName" placeholder="Имя..." />
+								</div>
+							</div>
+							<div class="mb-3 row">
+								<label for="orderEmail" class="col-sm-3 col-form-label">E-mail:</label>
+								<div class="col-sm-9">
+									<input type="email" class="form-control" id="orderEmail" placeholder="E-mail..." />
+								</div>
+							</div>
+							<div class="mb-3 row">
+								<label for="orederPhone" class="col-sm-3 col-form-label">Телефон:</label>
+								<div class="col-sm-9">
+									<input type="tel" class="form-control" id="orederPhone" placeholder="Телефон..." />
+								</div>
+							</div>
+							<div class="mb-3 row">
+								<label for="guestsRange" class="col-sm-5 col-form-label">Количество гостей:</label>
+								<div class="col-sm-1"><span id="range-output">1</span></div>
+								<div class="col-sm-6">
+									<input
+										type="range"
+										class="form-range"
+										min="0"
+										value="1"
+										max="20"
+										step="1"
+										id="guestsRange"
+										oninput="showValue(this.value)"
+										onchange="showValue(this.value)"
+									/>
+								</div>
+							</div>
+							<div class="mb-3 row">
+								<label for="staticEmail" class="col-sm-5 col-form-label">Выберите желаемый номер:</label>
+								<div class="col-sm-7">
+									<select class="form-select" aria-label="Default select example">
+										<option value="1">Стандартный</option>
+										<option value="2">Двойной</option>
+										<option value="3">Одноместный ПЛЮС</option>
+										<option value="4">Бизнес</option>
+										<option value="5">Деловой</option>
+									</select>
+								</div>
+							</div>
+						</form>
+						<div class="alert-div">
+							<div class="alert alert-success" role="alert" id="roomOrderedAlert">Номер успешно забронирован.</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">Закрыть</button>
+						<button type="button" class="btn btn-success text-white px-5 btn-lg" onclick="roomOrdered('add')">
+							Отправить
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+			crossorigin="anonymous"
+		></script>
+		<script>
+			const rangeOutput = document.getElementById('range-output');
+
+			let showValue = function (newValue) {
+				rangeOutput.innerHTML = newValue;
+			};
+
+			function roomOrdered() {
+				const alert = document.getElementById('roomOrderedAlert');
+				alert.classList.add('active');
+			}
+		</script>
+	</body>
+</html>
